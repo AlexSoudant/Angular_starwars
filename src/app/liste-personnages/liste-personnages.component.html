@@ -1,0 +1,11 @@
+<p>
+  Liste des personnages:
+</p>
+<barre-erreur [message]="error" *ngIf="error !== ''"></barre-erreur>
+<ul>
+  <li *ngFor="let item of Personnages">
+    <p> {{item.name}}</p>
+  </li>
+</ul>
+<p *ngIf="Personnages.length === 0">Aucun personnage n'a été trouvé</p>
+<pagination [page]="pageCourante" (pageChanged)="changerPage($event)"></pagination>

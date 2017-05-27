@@ -1,0 +1,13 @@
+<!--<p>
+  details-film works!
+  {{filmUrl}}
+</p>-->
+<barre-erreur [message]="error" *ngIf="error !== ''"></barre-erreur>
+<ul>
+  <p> {{Films.title}}</p>
+  <p> {{Films.episode_id}}</p>
+  <p> {{Films.opening_crawl}}</p>
+  <p> {{Films.director}}</p>
+  <p> {{Films.producer}}</p>
+</ul>
+<button [routerLink] = "['/liste']">Go back</button>

@@ -1,0 +1,13 @@
+<p>
+  Recherche un personnage:
+</p>
+<input [(ngModel)]="rechercheString" type="text" />
+<button (click)="rechercher()">Recherche</button>
+<barre-erreur [message]="error" *ngIf="error !== ''"></barre-erreur>
+<ul *ngIf="!detailsClicked">
+  <li *ngFor="let item of Personnages">
+    <p > {{item.name}} {{item.gender}} {{item.birth_year | birthdaybby}}</p>
+    <!--<p *ngIf="">No Character was found</p>-->
+    <button *ngIf="!detailsClicked" (click)="onclick()" [routerLink] = "['/details', item.name]">Details</button>
+  </li>
+</ul>
